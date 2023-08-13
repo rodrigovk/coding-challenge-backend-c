@@ -7,6 +7,8 @@ const port = env.server.port;
 
 setupApp().then((app) => {
   app.listen(port, url, () =>
-    console.log(`Server running at http://${url}:${port}/suggestions`)
+    console.log(
+      `Server running at http://${url || '127.0.0.1'}:${port}/suggestions`
+    )
   );
 });
